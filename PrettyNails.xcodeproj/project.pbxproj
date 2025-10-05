@@ -1,0 +1,488 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		001F83092CA1C0CE00D4C1A7 /* PrettyNailsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001F83082CA1C0CE00D4C1A7 /* PrettyNailsApp.swift */; };
+		001F830B2CA1C0CE00D4C1A7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001F830A2CA1C0CE00D4C1A7 /* ContentView.swift */; };
+		001F830D2CA1C0CF00D4C1A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 001F830C2CA1C0CF00D4C1A7 /* Assets.xcassets */; };
+		001F83102CA1C0CF00D4C1A7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 001F830F2CA1C0CF00D4C1A7 /* Preview Assets.xcassets */; };
+		// Views
+		001F83142CA1C10000D4C1A7 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001F83132CA1C10000D4C1A7 /* HomeView.swift */; };
+		001F83162CA1C10100D4C1A7 /* PhotoCaptureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001F83152CA1C10100D4C1A7 /* PhotoCaptureView.swift */; };
+		001F83182CA1C10200D4C1A7 /* PhotoPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001F83172CA1C10200D4C1A7 /* PhotoPickerView.swift */; };
+		001F831A2CA1C10300D4C1A7 /* NailDesignSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001F83192CA1C10300D4C1A7 /* NailDesignSelectionView.swift */; };
+		001F831C2CA1C10400D4C1A7 /* ProcessingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001F831B2CA1C10400D4C1A7 /* ProcessingView.swift */; };
+		001F831E2CA1C10500D4C1A7 /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001F831D2CA1C10500D4C1A7 /* ResultView.swift */; };
+		001F83202CA1C10600D4C1A7 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001F831F2CA1C10600D4C1A7 /* SettingsView.swift */; };
+		// Models
+		001F83222CA1C11000D4C1A7 /* NailDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001F83212CA1C11000D4C1A7 /* NailDesign.swift */; };
+		001F83242CA1C11100D4C1A7 /* ProcessingResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001F83232CA1C11100D4C1A7 /* ProcessingResult.swift */; };
+		001F83262CA1C11200D4C1A7 /* GeminiAPIModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001F83252CA1C11200D4C1A7 /* GeminiAPIModels.swift */; };
+		001F83282CA1C11300D4C1A7 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001F83272CA1C11300D4C1A7 /* AppState.swift */; };
+		// Services
+		001F832A2CA1C12000D4C1A7 /* GeminiAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001F83292CA1C12000D4C1A7 /* GeminiAPIClient.swift */; };
+		001F832C2CA1C12100D4C1A7 /* ImageProcessingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001F832B2CA1C12100D4C1A7 /* ImageProcessingService.swift */; };
+		001F832E2CA1C12200D4C1A7 /* NailDesignManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001F832D2CA1C12200D4C1A7 /* NailDesignManager.swift */; };
+		001F83302CA1C12300D4C1A7 /* APIKeyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001F832F2CA1C12300D4C1A7 /* APIKeyManager.swift */; };
+		// Utilities
+		001F83322CA1C13000D4C1A7 /* ImageUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001F83312CA1C13000D4C1A7 /* ImageUtils.swift */; };
+		001F83342CA1C13100D4C1A7 /* NetworkUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001F83332CA1C13100D4C1A7 /* NetworkUtils.swift */; };
+		001F83362CA1C13200D4C1A7 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001F83352CA1C13200D4C1A7 /* Extensions.swift */; };
+		// Configuration
+		001F83382CA1C14000D4C1A7 /* APIConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001F83372CA1C14000D4C1A7 /* APIConfig.swift */; };
+		001F833A2CA1C14100D4C1A7 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001F83392CA1C14100D4C1A7 /* Constants.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		001F83052CA1C0CE00D4C1A7 /* PrettyNails.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PrettyNails.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		001F83082CA1C0CE00D4C1A7 /* PrettyNailsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrettyNailsApp.swift; sourceTree = "<group>"; };
+		001F830A2CA1C0CE00D4C1A7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		001F830C2CA1C0CF00D4C1A7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		001F830F2CA1C0CF00D4C1A7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		001F83112CA1C0CF00D4C1A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		// Views
+		001F83132CA1C10000D4C1A7 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		001F83152CA1C10100D4C1A7 /* PhotoCaptureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCaptureView.swift; sourceTree = "<group>"; };
+		001F83172CA1C10200D4C1A7 /* PhotoPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPickerView.swift; sourceTree = "<group>"; };
+		001F83192CA1C10300D4C1A7 /* NailDesignSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NailDesignSelectionView.swift; sourceTree = "<group>"; };
+		001F831B2CA1C10400D4C1A7 /* ProcessingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessingView.swift; sourceTree = "<group>"; };
+		001F831D2CA1C10500D4C1A7 /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
+		001F831F2CA1C10600D4C1A7 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		// Models
+		001F83212CA1C11000D4C1A7 /* NailDesign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NailDesign.swift; sourceTree = "<group>"; };
+		001F83232CA1C11100D4C1A7 /* ProcessingResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessingResult.swift; sourceTree = "<group>"; };
+		001F83252CA1C11200D4C1A7 /* GeminiAPIModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeminiAPIModels.swift; sourceTree = "<group>"; };
+		001F83272CA1C11300D4C1A7 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		// Services
+		001F83292CA1C12000D4C1A7 /* GeminiAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeminiAPIClient.swift; sourceTree = "<group>"; };
+		001F832B2CA1C12100D4C1A7 /* ImageProcessingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageProcessingService.swift; sourceTree = "<group>"; };
+		001F832D2CA1C12200D4C1A7 /* NailDesignManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NailDesignManager.swift; sourceTree = "<group>"; };
+		001F832F2CA1C12300D4C1A7 /* APIKeyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKeyManager.swift; sourceTree = "<group>"; };
+		// Utilities
+		001F83312CA1C13000D4C1A7 /* ImageUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUtils.swift; sourceTree = "<group>"; };
+		001F83332CA1C13100D4C1A7 /* NetworkUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkUtils.swift; sourceTree = "<group>"; };
+		001F83352CA1C13200D4C1A7 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		// Configuration
+		001F83372CA1C14000D4C1A7 /* APIConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConfig.swift; sourceTree = "<group>"; };
+		001F83392CA1C14100D4C1A7 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		001F83022CA1C0CE00D4C1A7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		001F82FC2CA1C0CE00D4C1A7 = {
+			isa = PBXGroup;
+			children = (
+				001F83072CA1C0CE00D4C1A7 /* PrettyNails */,
+				001F83062CA1C0CE00D4C1A7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		001F83062CA1C0CE00D4C1A7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				001F83052CA1C0CE00D4C1A7 /* PrettyNails.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		001F83072CA1C0CE00D4C1A7 /* PrettyNails */ = {
+			isa = PBXGroup;
+			children = (
+				001F83082CA1C0CE00D4C1A7 /* PrettyNailsApp.swift */,
+				001F83112CA1C0CF00D4C1A7 /* Info.plist */,
+				001F833B2CA1C15000D4C1A7 /* Views */,
+				001F833C2CA1C15100D4C1A7 /* Models */,
+				001F833D2CA1C15200D4C1A7 /* Services */,
+				001F833E2CA1C15300D4C1A7 /* Utilities */,
+				001F833F2CA1C15400D4C1A7 /* Configuration */,
+				001F830C2CA1C0CF00D4C1A7 /* Assets.xcassets */,
+				001F830E2CA1C0CF00D4C1A7 /* Preview Content */,
+			);
+			path = PrettyNails;
+			sourceTree = "<group>";
+		};
+		001F830E2CA1C0CF00D4C1A7 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				001F830F2CA1C0CF00D4C1A7 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		001F833B2CA1C15000D4C1A7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				001F830A2CA1C0CE00D4C1A7 /* ContentView.swift */,
+				001F83132CA1C10000D4C1A7 /* HomeView.swift */,
+				001F83152CA1C10100D4C1A7 /* PhotoCaptureView.swift */,
+				001F83172CA1C10200D4C1A7 /* PhotoPickerView.swift */,
+				001F83192CA1C10300D4C1A7 /* NailDesignSelectionView.swift */,
+				001F831B2CA1C10400D4C1A7 /* ProcessingView.swift */,
+				001F831D2CA1C10500D4C1A7 /* ResultView.swift */,
+				001F831F2CA1C10600D4C1A7 /* SettingsView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		001F833C2CA1C15100D4C1A7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				001F83212CA1C11000D4C1A7 /* NailDesign.swift */,
+				001F83232CA1C11100D4C1A7 /* ProcessingResult.swift */,
+				001F83252CA1C11200D4C1A7 /* GeminiAPIModels.swift */,
+				001F83272CA1C11300D4C1A7 /* AppState.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		001F833D2CA1C15200D4C1A7 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				001F83292CA1C12000D4C1A7 /* GeminiAPIClient.swift */,
+				001F832B2CA1C12100D4C1A7 /* ImageProcessingService.swift */,
+				001F832D2CA1C12200D4C1A7 /* NailDesignManager.swift */,
+				001F832F2CA1C12300D4C1A7 /* APIKeyManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		001F833E2CA1C15300D4C1A7 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				001F83312CA1C13000D4C1A7 /* ImageUtils.swift */,
+				001F83332CA1C13100D4C1A7 /* NetworkUtils.swift */,
+				001F83352CA1C13200D4C1A7 /* Extensions.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		001F833F2CA1C15400D4C1A7 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				001F83372CA1C14000D4C1A7 /* APIConfig.swift */,
+				001F83392CA1C14100D4C1A7 /* Constants.swift */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		001F83042CA1C0CE00D4C1A7 /* PrettyNails */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 001F83152CA1C0CF00D4C1A7 /* Build configuration list for PBXNativeTarget "PrettyNails" */;
+			buildPhases = (
+				001F83012CA1C0CE00D4C1A7 /* Sources */,
+				001F83022CA1C0CE00D4C1A7 /* Frameworks */,
+				001F83032CA1C0CE00D4C1A7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PrettyNails;
+			productName = PrettyNails;
+			productReference = 001F83052CA1C0CE00D4C1A7 /* PrettyNails.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		001F82FD2CA1C0CE00D4C1A7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					001F83042CA1C0CE00D4C1A7 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+				};
+			};
+			buildConfigurationList = 001F83002CA1C0CE00D4C1A7 /* Build configuration list for PBXProject "PrettyNails" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 001F82FC2CA1C0CE00D4C1A7;
+			productRefGroup = 001F83062CA1C0CE00D4C1A7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				001F83042CA1C0CE00D4C1A7 /* PrettyNails */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		001F83032CA1C0CE00D4C1A7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				001F83102CA1C0CF00D4C1A7 /* Preview Assets.xcassets in Resources */,
+				001F830D2CA1C0CF00D4C1A7 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		001F83012CA1C0CE00D4C1A7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				001F830B2CA1C0CE00D4C1A7 /* ContentView.swift in Sources */,
+				001F83092CA1C0CE00D4C1A7 /* PrettyNailsApp.swift in Sources */,
+				// Views
+				001F83142CA1C10000D4C1A7 /* HomeView.swift in Sources */,
+				001F83162CA1C10100D4C1A7 /* PhotoCaptureView.swift in Sources */,
+				001F83182CA1C10200D4C1A7 /* PhotoPickerView.swift in Sources */,
+				001F831A2CA1C10300D4C1A7 /* NailDesignSelectionView.swift in Sources */,
+				001F831C2CA1C10400D4C1A7 /* ProcessingView.swift in Sources */,
+				001F831E2CA1C10500D4C1A7 /* ResultView.swift in Sources */,
+				001F83202CA1C10600D4C1A7 /* SettingsView.swift in Sources */,
+				// Models
+				001F83222CA1C11000D4C1A7 /* NailDesign.swift in Sources */,
+				001F83242CA1C11100D4C1A7 /* ProcessingResult.swift in Sources */,
+				001F83262CA1C11200D4C1A7 /* GeminiAPIModels.swift in Sources */,
+				001F83282CA1C11300D4C1A7 /* AppState.swift in Sources */,
+				// Services
+				001F832A2CA1C12000D4C1A7 /* GeminiAPIClient.swift in Sources */,
+				001F832C2CA1C12100D4C1A7 /* ImageProcessingService.swift in Sources */,
+				001F832E2CA1C12200D4C1A7 /* NailDesignManager.swift in Sources */,
+				001F83302CA1C12300D4C1A7 /* APIKeyManager.swift in Sources */,
+				// Utilities
+				001F83322CA1C13000D4C1A7 /* ImageUtils.swift in Sources */,
+				001F83342CA1C13100D4C1A7 /* NetworkUtils.swift in Sources */,
+				001F83362CA1C13200D4C1A7 /* Extensions.swift in Sources */,
+				// Configuration
+				001F83382CA1C14000D4C1A7 /* APIConfig.swift in Sources */,
+				001F833A2CA1C14100D4C1A7 /* Constants.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		001F83132CA1C0CF00D4C1A7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		001F83142CA1C0CF00D4C1A7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		001F83162CA1C0CF00D4C1A7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"PrettyNails/PrettyNails/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = PrettyNails/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.prettynails.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		001F83172CA1C0CF00D4C1A7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"PrettyNails/PrettyNails/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = PrettyNails/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.prettynails.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		001F83002CA1C0CE00D4C1A7 /* Build configuration list for PBXProject "PrettyNails" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				001F83132CA1C0CF00D4C1A7 /* Debug */,
+				001F83142CA1C0CF00D4C1A7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		001F83152CA1C0CF00D4C1A7 /* Build configuration list for PBXNativeTarget "PrettyNails" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				001F83162CA1C0CF00D4C1A7 /* Debug */,
+				001F83172CA1C0CF00D4C1A7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 001F82FD2CA1C0CE00D4C1A7 /* Project object */;
+}
