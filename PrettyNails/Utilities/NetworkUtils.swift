@@ -1,5 +1,6 @@
 import Foundation
 import Network
+import UIKit
 
 class NetworkUtils {
     static let shared = NetworkUtils()

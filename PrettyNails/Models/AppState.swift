@@ -25,7 +25,7 @@ class AppState: ObservableObject {
         selectedNailDesign = design
     }
 
-    func setCurrentImage(_ image: UIImage) {
+    func setCurrentImage(_ image: UIImage?) {
         currentImage = image
     }
 
