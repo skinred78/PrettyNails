@@ -5,6 +5,74 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Version 0.2.0] - 2025-10-05
+
+### Added
+- **Phase 3: Business Logic and Services Implementation**
+  - Complete Vision framework integration for hand and nail detection
+  - Advanced image processing pipeline with quality analysis
+  - Nail mask generation for AI in-painting operations
+  - Comprehensive error handling with user-friendly messages
+
+- **Vision Framework Integration**
+  - Hand pose detection using `VNDetectHumanHandPoseRequest`
+  - Fingertip tracking for precise nail area identification
+  - Confidence-based quality assessment (0.3+ threshold)
+  - Real-time nail area detection with bounding boxes
+
+- **Enhanced Image Processing**
+  - Multi-stage image validation and preprocessing
+  - Image quality scoring system (0.0-1.0 scale)
+  - Format validation and conversion (JPEG/PNG)
+  - Image enhancement filters (exposure, saturation, sharpening)
+  - Orientation normalization and hand cropping
+  - Memory-efficient image handling with compression
+
+- **Mask Generation System**
+  - Elliptical nail masks for in-painting operations
+  - White-on-black mask format for AI processing
+  - Precise positioning using Vision framework data
+  - Configurable nail size and positioning
+
+- **Quality Analysis Engine**
+  - Image quality scoring with detailed recommendations
+  - Issue detection (no nails, low resolution, poor lighting)
+  - Quality levels: Excellent, Good, Fair, Poor
+  - Actionable user feedback for image improvements
+
+### Enhanced
+- **ImageProcessingService.swift**
+  - Added comprehensive image validation pipeline
+  - Implemented quality analysis with scoring
+  - Enhanced error handling with recovery suggestions
+  - Added async/await patterns for smooth performance
+
+- **ImageUtils.swift**
+  - Extended with Vision framework capabilities
+  - Added image enhancement and cropping functions
+  - Implemented format detection and conversion
+  - Added comprehensive validation functions
+
+- **Error Handling System**
+  - Detailed error types with descriptions and recovery suggestions
+  - User-friendly error messages for all processing stages
+  - Comprehensive validation throughout the pipeline
+  - Quality-based recommendations for image improvements
+
+### Technical Improvements
+- Async/await patterns for UI responsiveness
+- Background processing for Vision framework operations
+- Confidence-based filtering for accurate nail detection
+- Memory optimization for large image processing
+- Robust error recovery and user guidance
+
+### Development Notes
+- All business logic services are now fully implemented
+- Vision framework integration tested and working
+- Image processing pipeline handles various input qualities
+- Ready for Phase 4: API Integration with Gemini
+- Maintains clean separation between UI and business logic
+
 ## [Version 0.1.0] - 2025-10-05
 
 ### Added
